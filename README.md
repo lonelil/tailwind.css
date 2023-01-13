@@ -26,4 +26,4 @@ Just add the stylesheet to your head of your HTML file,
 or in your css file.
 ```css
 @import url(https://lonelil.github.io/tailwind.css/main.css);
-```y
+```

@@ -36,6 +36,8 @@ jobs:
         run: |
           ./tailwindcss -i input.css -o dist/main.css
           ./tailwindcss -i input.css -o dist/main.min.css --minify
+          ./tailwindcss -i input.css -o dist/full.css -c tailwind-variants.config.js
+          ./tailwindcss -i input.css -o dist/full.min.css -c tailwind-variants.config.js --minify
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:

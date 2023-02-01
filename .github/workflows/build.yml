@@ -35,8 +35,16 @@ jobs:
         run: |
           ./tailwindcss -i input.css -o dist/main.css
           ./tailwindcss -i input.css -o dist/main.min.css --minify
-          ./tailwindcss -i input.css -o dist/full.css -c tailwind-variants.config.js
-          ./tailwindcss -i input.css -o dist/full.min.css -c tailwind-variants.config.js --minify
+          ./tailwindcss -i input.css -o dist/variants/dark.css -c variants/dark.config.js
+          ./tailwindcss -i input.css -o dist/variants/dark.css -c variants/dark.config.js --minify
+          ./tailwindcss -i input.css -o dist/variants/hover.css -c variants/hover.config.js
+          ./tailwindcss -i input.css -o dist/variants/hover.min.css -c variants/hover.config.js --minify
+          ./tailwindcss -i input.css -o dist/variants/lg.css -c variants/lg.config.js
+          ./tailwindcss -i input.css -o dist/variants/lg.min.css -c variants/lg.config.js --minify
+          ./tailwindcss -i input.css -o dist/variants/md.css -c variants/md.config.js
+          ./tailwindcss -i input.css -o dist/variants/md.min.css -c variants/md.md.js --minify
+          ./tailwindcss -i input.css -o dist/variants/xl.css -c variants/xl.config.js
+          ./tailwindcss -i input.css -o dist/variants/xl.min.css -c variants/xl.config.js --minify
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:

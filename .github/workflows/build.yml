@@ -31,12 +31,14 @@ jobs:
         run: |
           curl -o tailwindcss -L https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-linux-x64
           chmod +x tailwindcss
-      - name: Generate
+      - name: Generate Main
         run: |
           ./tailwindcss -i input.css -o dist/main.css
           ./tailwindcss -i input.css -o dist/main.min.css --minify
+      - name: Generate Variants
+        run: |
           ./tailwindcss -i input.css -o dist/variants/dark.css -c variants/dark.config.js
-          ./tailwindcss -i input.css -o dist/variants/dark.css -c variants/dark.config.js --minify
+          ./tailwindcss -i input.css -o dist/variants/dark.min.css -c variants/dark.config.js --minify
           ./tailwindcss -i input.css -o dist/variants/hover.css -c variants/hover.config.js
           ./tailwindcss -i input.css -o dist/variants/hover.min.css -c variants/hover.config.js --minify
           ./tailwindcss -i input.css -o dist/variants/lg.css -c variants/lg.config.js

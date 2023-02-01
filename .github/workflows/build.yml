@@ -44,7 +44,7 @@ jobs:
           ./tailwindcss -i input.css -o dist/variants/lg.css -c variants/lg.config.js
           ./tailwindcss -i input.css -o dist/variants/lg.min.css -c variants/lg.config.js --minify
           ./tailwindcss -i input.css -o dist/variants/md.css -c variants/md.config.js
-          ./tailwindcss -i input.css -o dist/variants/md.min.css -c variants/md.md.js --minify
+          ./tailwindcss -i input.css -o dist/variants/md.min.css -c variants/md.config.js --minify
           ./tailwindcss -i input.css -o dist/variants/xl.css -c variants/xl.config.js
           ./tailwindcss -i input.css -o dist/variants/xl.min.css -c variants/xl.config.js --minify
       - name: Upload artifact
